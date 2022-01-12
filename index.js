@@ -2,7 +2,7 @@ import kuler from 'kuler';
 
 import randomColor from 'randomcolor';
 
-// Prints result random:
+// Prints the result in the required pattern:
 function printResult(color) {
   let str = '#';
   let space = ' ';
@@ -34,7 +34,7 @@ function printResult(color) {
   console.log(kuler(fullLine, color));
 }
 
-// Randomly generates color
+// Randomly generates color depending on user input:
 
 let color;
 if (process.argv[2]) {
