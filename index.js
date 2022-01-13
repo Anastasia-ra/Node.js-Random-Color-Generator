@@ -4,10 +4,10 @@ import randomColor from 'randomcolor';
 
 // Function that prints the result in the required pattern:
 function printResult(color) {
-  let fullLine = '#'.repeat(31);
-  let partLine = '#'.repeat(5);
-  let partSpace = ' '.repeat(5);
-  let partSpace2 = ' '.repeat(7);
+  const fullLine = '#'.repeat(31);
+  const partLine = '#'.repeat(5);
+  const partSpace = ' '.repeat(5);
+  const partSpace2 = ' '.repeat(7);
 
   console.log(kuler(fullLine, color));
   console.log(kuler(fullLine, color));
