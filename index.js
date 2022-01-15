@@ -1,49 +1,29 @@
 import kuler from 'kuler';
-
 import randomColor from 'randomcolor';
 
-// Function that prints the result in the required pattern:
-function printResult(color) {
-  const fullLine = '#'.repeat(31);
-  const partLine = '#'.repeat(5);
-  const partSpace = ' '.repeat(5);
-  const partSpace2 = ' '.repeat(7);
+// Prints the result in the required pattern:
 
-  console.log(kuler(fullLine, color));
-  console.log(kuler(fullLine, color));
-  console.log(kuler(fullLine, color));
-  console.log(
-    kuler(
-      `${partLine} ${partSpace} ${partSpace2} ${partSpace} ${partLine}`,
-      color,
-    ),
-  );
-  console.log(
-    kuler(`${partLine} ${partSpace} ${color} ${partSpace} ${partLine}`, color),
-  );
-  console.log(
-    kuler(
-      `${partLine} ${partSpace} ${partSpace2} ${partSpace} ${partLine}`,
-      color,
-    ),
-  );
-  console.log(kuler(fullLine, color));
-  console.log(kuler(fullLine, color));
-  console.log(kuler(fullLine, color));
+function printResult(color) {
+  const fullLine = kuler('#'.repeat(31), color);
+  const partLine = kuler('#'.repeat(5), color);
+  const partSpace5 = kuler(' '.repeat(5), color);
+  const partSpace7 = kuler(' '.repeat(7), color);
+
+  console.log(`${fullLine}
+${fullLine}
+${fullLine}
+${partLine} ${partSpace5} ${partSpace7} ${partSpace5} ${partLine}
+${partLine} ${partSpace5} ${color} ${partSpace5} ${partLine}
+${partLine} ${partSpace5} ${partSpace7} ${partSpace5} ${partLine}
+${fullLine}
+${fullLine}
+${fullLine}`);
 }
 
 // Randomly generates color depending on user input and then prints it to the console:
 
-let color;
-if (process.argv[2]) {
-  if (process.argv[3]) {
-    color = randomColor({ luminosity: process.argv[3], hue: process.argv[2] });
-    printResult(color);
-  } else {
-    color = randomColor({ hue: process.argv[2] });
-    printResult(color);
-  }
-} else {
-  color = randomColor();
-  printResult(color);
-}
+const color = randomColor({
+  luminosity: process.argv[3],
+  hue: process.argv[2],
+});
+printResult(color);
