@@ -1,7 +1,7 @@
 import kuler from 'kuler';
 import randomColor from 'randomcolor';
 
-// Prints the result in the required pattern:
+// Prints the result in the required pattern
 
 function printResult(color) {
   const fullLine = kuler('#'.repeat(31), color);
@@ -20,7 +20,7 @@ ${fullLine}
 ${fullLine}`);
 }
 
-// Randomly generates color depending on user input and then prints it to the console:
+// Randomly generates color depending on user input and then print it
 
 const color = randomColor({
   luminosity: process.argv[3],
