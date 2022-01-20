@@ -13,7 +13,7 @@ function printResult(color) {
 ${fullLine}
 ${fullLine}
 ${partLine} ${partSpace5} ${partSpace7} ${partSpace5} ${partLine}
-${partLine} ${partSpace5} ${color} ${partSpace5} ${partLine}
+${partLine} ${partSpace5} ${kuler(color, color)} ${partSpace5} ${partLine}
 ${partLine} ${partSpace5} ${partSpace7} ${partSpace5} ${partLine}
 ${fullLine}
 ${fullLine}
